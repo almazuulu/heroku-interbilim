@@ -200,8 +200,7 @@ def send_welcome(message):
 @bot.callback_query_handler(func=lambda call:True)
 def call_back_menus(call):
     cid = call.message.chat.id
-
-    bot.answer_callback_query(callback_query_id=call.id, text='Спасибо за честный ответ!')
+    #bot.answer_callback_query(callback_query_id=call.id, text='Спасибо за честный ответ!')
 
     if call.data =='aryz_jazuu':
        bot.send_message(cid, 'ℹ️ Төмөнкү менюдан керектүү басманы басыңыз!', reply_markup=keyBoardAryz())
