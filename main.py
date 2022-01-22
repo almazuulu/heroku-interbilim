@@ -3,7 +3,8 @@ from telebot import types
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import pandas as pd
 
-bot = telebot.TeleBot("5078688865:AAFzYpvzBBSUC_AIpVT5lZRhPkqkFA-AJmg")
+TOKEN = "5078688865:AAFzYpvzBBSUC_AIpVT5lZRhPkqkFA-AJmg"
+bot = telebot.TeleBot(TOKEN)
 
 commands = {
     'start': 'Телеграм ботту башынан баштоо',
@@ -461,4 +462,5 @@ def compensassion_countBatken(message):
     bot.send_message(cid, 'Башкы меню: ', reply_markup=markup_inline())
 
 
-bot.infinity_polling()
+bot.polling(none_stop=True)
+
